@@ -1,3 +1,3 @@
 # Windows-Spotlight-Wallpapers
 
-Download the latest version from releases
+Download the latest version from release.

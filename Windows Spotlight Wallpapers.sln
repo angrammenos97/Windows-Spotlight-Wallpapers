@@ -5,10 +5,14 @@ VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Windows Spotlight Wallpapers", "Windows Spotlight Wallpapers\Windows Spotlight Wallpapers.vcxproj", "{7D9761ED-810D-40F0-B670-6D9A033CEC95}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WsWsetup", "WsWsetup\WsWsetup.vdproj", "{FE1845E2-3ECC-44BC-9E72-C72F36D2E8F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		DefaultBuild|x64 = DefaultBuild|x64
+		DefaultBuild|x86 = DefaultBuild|x86
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
@@ -17,10 +21,20 @@ Global
 		{7D9761ED-810D-40F0-B670-6D9A033CEC95}.Debug|x64.Build.0 = Debug|x64
 		{7D9761ED-810D-40F0-B670-6D9A033CEC95}.Debug|x86.ActiveCfg = Debug|Win32
 		{7D9761ED-810D-40F0-B670-6D9A033CEC95}.Debug|x86.Build.0 = Debug|Win32
+		{7D9761ED-810D-40F0-B670-6D9A033CEC95}.DefaultBuild|x64.ActiveCfg = Debug|x64
+		{7D9761ED-810D-40F0-B670-6D9A033CEC95}.DefaultBuild|x64.Build.0 = Debug|x64
+		{7D9761ED-810D-40F0-B670-6D9A033CEC95}.DefaultBuild|x86.ActiveCfg = Debug|Win32
+		{7D9761ED-810D-40F0-B670-6D9A033CEC95}.DefaultBuild|x86.Build.0 = Debug|Win32
 		{7D9761ED-810D-40F0-B670-6D9A033CEC95}.Release|x64.ActiveCfg = Release|x64
 		{7D9761ED-810D-40F0-B670-6D9A033CEC95}.Release|x64.Build.0 = Release|x64
 		{7D9761ED-810D-40F0-B670-6D9A033CEC95}.Release|x86.ActiveCfg = Release|Win32
 		{7D9761ED-810D-40F0-B670-6D9A033CEC95}.Release|x86.Build.0 = Release|Win32
+		{FE1845E2-3ECC-44BC-9E72-C72F36D2E8F9}.Debug|x64.ActiveCfg = Debug
+		{FE1845E2-3ECC-44BC-9E72-C72F36D2E8F9}.Debug|x86.ActiveCfg = Debug
+		{FE1845E2-3ECC-44BC-9E72-C72F36D2E8F9}.DefaultBuild|x64.ActiveCfg = Debug
+		{FE1845E2-3ECC-44BC-9E72-C72F36D2E8F9}.DefaultBuild|x86.ActiveCfg = Debug
+		{FE1845E2-3ECC-44BC-9E72-C72F36D2E8F9}.Release|x64.ActiveCfg = Release
+		{FE1845E2-3ECC-44BC-9E72-C72F36D2E8F9}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

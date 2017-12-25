@@ -115,6 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="WinSpotWall.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CopyFiles.cmd" />
+    <None Include="FilesInTxt.cmd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

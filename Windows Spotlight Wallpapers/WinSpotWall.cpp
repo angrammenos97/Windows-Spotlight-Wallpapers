@@ -7,16 +7,34 @@ using namespace std;
 
 bool GetImageDimensions(const char *fn, int *x, int *y);
 
-
 int main()
 {
+	string userDestination = getenv("userprofile");
+	string filesDestination = userDestination + "\\Pictures\\Windows_Wallpapers\\files.txt";
+
+	// First time run
+	bool firstTime = false;
+	fstream *testFile = new fstream;
+	testFile->open(filesDestination);
+	if (!testFile->is_open()) {
+		system("mkdir \"%USERPROFILE%\\Pictures\\Windows_Wallpapers\"");
+		system("mkdir \"%USERPROFILE%\\Pictures\\Windows_Wallpapers\\Older\"");
+		firstTime = true;
+	}
+	else {		
+		testFile->close();
+		delete testFile;
+		//system("del \"%USERPROFILE%\\Pictures\\Windows_Wallpapers\\files.txt\"");
+	}
+
+	// Main process
 	system("CopyFiles.cmd");
 	system("FilesInTxt.cmd");
-	 
+
 	fstream myFile;
-	myFile.open("files.txt");
+	myFile.open(filesDestination);
 	if (!myFile.is_open()) {
-		cout << "Cannot open file \"file.txt\" ." << endl;
+		cout << "Cannot open file \"files.txt\" ." << endl;
 		system("pause");
 		exit(-1);
 	}
@@ -26,16 +44,21 @@ int main()
 	while (getline(myFile, line))
 	{
 		//cout << line << endl;		
-		if (!GetImageDimensions(line.c_str(), &width, &height) || width != 1920 || height != 1080)
-		{
+		if (!GetImageDimensions(line.c_str(), &width, &height) || width != 1920 || height != 1080) {
 			//cout << "deleting.." << endl;
 			string command = "del " + line;
 			system(command.c_str());
 		}
 		//cout << "( " << width << " , " << height << " )" << endl;
 	}
+
+	// First time run
+	if (firstTime)
+		// Open choose background settings
+		system("start ms-settings:personalization-background");
 	
 	//system("pause");
+	myFile.close();
 	return 0;
 }
 

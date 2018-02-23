@@ -1,15 +1,18 @@
 @echo off
-title Windows Spotlight Reflection
+title Windows Spotlight Wallpapers
 
-echo deleting old files
+:: Move previus photos into the Older folder
+move /Y %USERPROFILE%\Pictures\Windows_Wallpapers\*jpg %USERPROFILE%\Pictures\Windows_Wallpapers\Older\
 
-del Wallpapers\*.jpg
+:: Delete any useless remainig file
+del /Q %USERPROFILE%\Pictures\Windows_Wallpapers\*
 
 echo Coping files... 
 
-copy %localappdata%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets Wallpapers\
+:: Copy downoaded photos to our working folder
+copy %localappdata%\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets %USERPROFILE%\Pictures\Windows_Wallpapers
 
-ren Wallpapers\* *.jpg
+:: Rename all files to -.jpg
+ren %USERPROFILE%\Pictures\Windows_Wallpapers\* *.jpg
 
-echo Task Completed
 ::pause
